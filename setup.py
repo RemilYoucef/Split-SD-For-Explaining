@@ -1,11 +1,22 @@
 from distutils.core import setup
 
-setup(
-  name = 'splitsd',
-  packages = ['splitsd'], # this must be the same as the name above
-  version = '0.1',
-  description = 'Split SD For Explaining',
-  author = 'Youcef REMIL',
-  author_email = 'fy_remil@esi.dz',
-  url = 'https://github.com/RemilYoucef/Split-SD-For-Explaining'
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+
+setuptools.setup(
+    name="Split-SD-For-Explaining", # Replace with your own username
+    version="0.1",
+    author="Youcef REMIL",
+    author_email="fy_remil@esi.dz",
+    description="Split SD for explanations",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="https://github.com/RemilYoucef/Split-SD-For-Explaining",
+    packages=setuptools.find_packages(),
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
+    python_requires='>=3.6',
 )
